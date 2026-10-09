@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>결과 - 나의 개발자 성향 테스트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="page-result">
+  <div class="container">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> 나의 개발자 성향 테스트</div>
+    </div>
+
+    <div class="quizHeader">
+      <div>
+        <h2>결과</h2>
+        <div class="small">가장 높은 점수의 성향을 기준으로 유형을 보여줘.</div>
+      </div>
+    </div>
+
+    <!-- ✅ 4개 영역(둥근 네모 박스) -->
+    <div class="resultLayout">
+
+      <!-- 1) 성향 + 클러스터/유사도 + 마름모(레이더) -->
+      <section class="panel panelSummary">
+        <div class="panelHead">
+          <div>
+            <div class="small">당신의 대표 성향</div>
+            <div class="resultMain" id="typeName">-</div>
+            <div class="desc" id="typeDesc">-</div>
+
+            <div class="metaRow">
+              <span class="metaChip" id="clusterChip">선택된 직무 클러스터: -</span>
+              <span class="metaChip" id="similarityChip">유사도: -</span>
+            </div>
+
+            <div class="desc track" id="trackResult">-</div>
+          </div>
+
+          <div class="badge" id="typeBadge">
+            <i></i><span id="typeBadgeText">-</span>
+          </div>
+        </div>
+
+        <div class="summaryGrid">
+          <div class="radarCard">
+            <div class="radarTitle">성향 분포 (마름모)</div>
+            <div class="radarWrap">
+              <svg id="radarSvg" viewBox="0 0 320 320" role="img" aria-label="개발자 성향 레이더 차트"></svg>
+            </div>
+            <div class="radarHint small">점수는 15점 만점 기준으로 시각화돼.</div>
+          </div>
+
+          <div class="scoreMini" id="scoreMini"></div>
+        </div>
+      </section>
+
+      <!-- 2) 선택된 직무(클러스터 직무 목록) -->
+      <section class="panel" id="rolesPanel">
+        <h3 class="panelTitle">선택된 직무</h3>
+        <div class="small" id="clusterDesc">-</div>
+        <div class="chipList" id="roleChips"></div>
+      </section>
+
+      <!-- 3) 커리큘럼 -->
+      <section class="panel" id="curriculumPanel">
+        <h3 class="panelTitle">학과 추천 커리큘럼</h3>
+        <div class="small">내 성향(클러스터)에 맞춰 2·3·4학년에서 우선 추천하는 과목들이야.</div>
+        <div class="curriculumGrid" id="curriculumGrid"></div>
+      </section>
+
+ <!-- 4) 고용정보 -->
+<section class="panel" id="employmentPanel">
+  <h3 class="panelTitle">추천 채용 정보</h3>
+  <div class="small">
+    선택된 직무 클러스터와 연관성이 높은 채용 공고야.
+  </div>
+
+  <!-- ✅ 채용 리스트 들어갈 곳 -->
+  <div class="jobList" id="jobList"></div>
+</section>
+
+
+    </div>
+
+    <div class="actionRow actionBottom">
+      <a class="btn secondary" href="./questions.html">다시하기</a>
+      <a class="btn" href="./home.html">홈으로</a>
+    </div>
+
+  </div>
+
+  <script src="./result.js"></script>
+</body>
+</html>

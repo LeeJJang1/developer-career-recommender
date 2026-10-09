@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>질문 - 나의 개발자 성향 테스트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> 나의 개발자 성향 테스트</div>
+      <div class="small">Questions</div>
+    </div>
+
+    <div class="quizHeader">
+      <div>
+        <h2>개발자 성향 질문</h2>
+        <div class="small">12개 모두 선택하면 결과 보기가 활성화돼.</div>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <div class="small" id="progressText">0 / 12</div>
+        <div class="progressWrap"><div class="progressBar" id="progressBar"></div></div>
+      </div>
+    </div>
+
+    <div id="quizList" class="quizGrid"></div>
+
+    <div class="actionRow">
+      <div class="hint" id="hintText">12개 모두 선택하면 결과 보기가 활성화돼.</div>
+      <a class="btn secondary" href="./home.html">홈으로</a>
+      <button class="btn" id="resultBtn" disabled>결과 보기</button>
+    </div>
+  </div>
+
+  <script src="./questions.js"></script>
+</body>
+</html>

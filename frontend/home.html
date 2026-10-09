@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>나의 개발자 성향 테스트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> 나의 개발자 성향 테스트</div>
+      <div class="small">Home</div>
+    </div>
+
+    <section class="hero">
+      <div class="heroLeft">
+        <div class="kicker">개발자 적성 검사</div>
+        <h1>내가 개발자가 된다면,<br/>나의 개발자 성향은?</h1>
+        <div class="sub">
+          12문항으로 4가지 성향(Logic / Creative / Analysis / Stability)을 점수화하고,
+          가장 높은 성향을 결과로 보여줘.
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn" href="./questions.html">무료 검사 시작하기</a>
+          <button class="btn secondary" id="resetBtn">이전 결과 초기화</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span>문항 수</span><b>12개</b></div>
+          <div class="stat"><span>성향</span><b>4가지</b></div>
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <div class="card">
+          <p class="cardTitle">성향 4가지</p>
+          <div class="pillRow">
+            <span class="pill logic">Logic (백엔드·시스템)</span>
+            <span class="pill creative">Creative (프론트·UX)</span>
+            <span class="pill analysis">Analysis (AI·데이터)</span>
+            <span class="pill stability">Stability (운영·보안)</span>
+          </div>
+        </div>
+        <div class="card">
+          <p class="cardTitle">진행 방식</p>
+          <div class="small">
+            각 문항은 5점(매우 그렇다) ~ 1점(전혀 아니다).<br/>
+            Q1~3 / Q4~6 / Q7~9 / Q10~12 를 각각 합산 후, 최고 성향을 출력해.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      localStorage.removeItem("devTestAnswers");
+      localStorage.removeItem("devTestScores");
+      alert("저장된 결과를 초기화했어!");
+    });
+  </script>
+</body>
+</html>
